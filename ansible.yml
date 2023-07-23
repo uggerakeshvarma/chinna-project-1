@@ -1,10 +1,10 @@
 - hosts: all
   tasks:
    - name: stop container
-     shell: docker container stop mydockercontainer
+     shell: docker container stop webappcontainer
    - name: remove container
-     shell: docker container rm mydockercontainer
+     shell: docker container rm webappcontainer
    - name: remove docker image
-     shell: docker image rmi trainingskumar/mydocker_image
+     shell: docker image rmi trainingskumar/webproject1
    - name: create new container
-     shell: docker container run -itd --name mydockercontainer -p 9000:80 trainingskumar/mydocker_image
+     shell: docker container run -itd --name mydockercontainer -p 9000:80 trainingskumar/webproject1
