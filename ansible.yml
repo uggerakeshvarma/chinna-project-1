@@ -1,4 +1,4 @@
 - hosts: all
   tasks:
    - name: create new container
-     shell: docker container run -itd --name mydockercontainer -p 9000:80 trainingskumar/webproject1
+     shell: docker container run -itd --name webapp-container -p 9000:80 trainingskumar/webproject1
